@@ -9,23 +9,23 @@ Library provides additionnal functions to get time and date information in strin
 
 ## Hardware Requisite :
 - Any Arduino board
-- A D3231 Real Time Clock (RTC) module, with a 10k Ohm resistor placed between INT and VCC pins
+- A D3231 Real Time Clock (RTC) module, with a 10k Ohm resistor placed between INT/SQW and VCC pins (as shown in the picture below)
 - D3231 power (vcc/gnd pins) and I2C bus (sda/scl pins) conected to the Arduino
 - D3231 INT/SQW pin connected to Arduino pin 2 (or any pin usable for interrupts, check your Arduino board hardware)
 
 ![Hardware picture](https://github.com/franckmarini/RTCMinHeartBeat/blob/pictures/Arduino_D3231_pic.jpg)
 
 ## API
-- set() function : set new time&date in RTC
-- read() function : get up-to-date RTC time&date infos
-- pinconfig() function : provides the Arduino pin number connected to the RTC Interrupt pin ("INT/SWQ"). Once executed, heartbeat is execution is started.
-- heartBeat() function : returns TRUE once per minute. Function to be called cyclically.
+- **set()** function : set new time&date in RTC
+- **read()** function : get up-to-date RTC time&date infos
+- **pinconfig()** function : set the Arduino pin number connected to the RTC Interrupt pin ("INT/SWQ"), and start heartbeat
+- **heartBeat()** function : returns TRUE once per minute. Function to be called cyclically.
 
 ## Additional functions
-- dayString() : returns day of week (sunday...saturday) in a string
-- dateString() : returns date (DD MM YYYY) in a string
-- timeString() : returns time (HH:MM:SS) in a string
-- toString() : returns day + date + time in a string
+- **dayString()** : returns day of week (sunday...saturday) in a string
+- **dateString()** : returns date (DD MM YYYY) in a string
+- **timeString()** : returns time (HH:MM:SS) in a string
+- **toString()** : returns day + date + time in a string
 
 ## Code Example
 ```
