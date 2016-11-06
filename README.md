@@ -18,7 +18,7 @@ Library provides additionnal functions to get time and date information in strin
 ## RTC API
 - **rtc.set()** function : set new time&date in RTC
 - **rtc.read()** function : get up-to-date RTC time&date infos
-- **rtc.pinconfig()** function : set the Arduino pin number connected to the RTC Interrupt pin ("INT/SWQ"), and start heartbeat
+- **rtc.configPin()** function : set the Arduino pin number connected to the RTC Interrupt pin ("INT/SWQ"), and start heartbeat
 - **rtc.heartBeat()** function : returns TRUE once per minute. Function to be called cyclically.
 
 ## Get Time & Date infos in string format
@@ -36,7 +36,7 @@ TimeDate td; // time and date infos object
 
 void setup() {
   Serial.begin(9600);
-  rtc.ConfigPin(2); // notify which Arduino pin (here pin 2) is connected to D3231 RTC INT pin. Minute heartbeat execution is started!
+  rtc.configPin(2); // notify which Arduino pin (here pin 2) is connected to D3231 RTC INT pin. Heartbeat is started!
 }
 
 void loop() {

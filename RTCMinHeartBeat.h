@@ -84,7 +84,7 @@ class RTCMinHeartBeat {
 
   public :
 	static RTCMinHeartBeat _rtc; // unique instance (singleton design pattern)
-	byte ConfigPin(int pin); // declaration of the pin handling RTC interrupt signal
+	byte configPin(int pin); // declaration of the pin handling RTC interrupt signal
 	
 	// heartbeat() function returns true once per minute 
 	boolean heartBeat() {if (!_beat) return false; clearHeartBeat(); return true; }

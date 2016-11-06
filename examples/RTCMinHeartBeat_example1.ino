@@ -6,7 +6,7 @@ TimeDate td; // time and date infos object
 
 void setup() {
   Serial.begin(9600);
-  rtc.ConfigPin(2); // notify which Arduino pin (here pin 2) is connected to D3231 RTC INT pin. Minute heartbeat execution is started!
+  rtc.configPin(2); // notify which Arduino pin (here pin 2) is connected to D3231 RTC INT pin. Heartbeat is started!
 }
 
 void loop() {

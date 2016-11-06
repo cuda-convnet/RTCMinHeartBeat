@@ -47,7 +47,7 @@ static byte Alarm2SettingsVal[] = {
 };
 
 
-byte RTCMinHeartBeat::ConfigPin(int pin)
+byte RTCMinHeartBeat::configPin(int pin)
 {
 	pinMode(pin, INPUT_PULLUP);
 	attachInterrupt(digitalPinToInterrupt(pin), RTCMinHeartBeatISR , FALLING);
