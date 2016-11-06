@@ -13,6 +13,8 @@ Library provides additionnal functions to get time and date information in strin
 - D3231 power (vcc/gnd pins) and I2C bus (sda/scl pins) conected to the Arduino
 - D3231 INT/SQW pin connected to Arduino pin 2 (or any pin usable for interrupts, check your Arduino board hardware)
 
+![Hardware picture](https://github.com/franckmarini/RTCMinHeartBeat/blob/pictures/Arduino_D3231_pic.jpg)
+
 ## API
 - set() function : set new time&date in RTC
 - read() function : get up-to-date RTC time&date infos
